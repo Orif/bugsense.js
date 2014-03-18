@@ -1368,7 +1368,7 @@ var bugsense;
           'message'    : msg[1],
           'where'      : [ url, line ].join( ':' ),
           'klass'      : klass,
-          'backtrace' : stacktrace,
+          'backtrace': ( stacktrace && stacktrace.length ) ? stacktrace : [],
           'breadcrumbs': this.breadcrumbs
         }
       });
